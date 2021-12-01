@@ -28,7 +28,7 @@ function sendMessage(string $sender, string $to, string $subject, string $messag
 
     $client = getClient();
     $service = new Google_Service_Gmail($client);
-    $service->users_messages->send($to, $message);
+    $service->users_messages->send('me', $message);
 }
 
 /**
