@@ -22,7 +22,7 @@ $app->post('/order', function (Request $request, Response $response, array $args
     $typeOfCleaning = $body['type_of_cleaning'] ?? '-';
     $plan = $body['plan'] ?? '-';
     $totalPrice = (int)($body['total_price'] ?? 0);
-    $comment = $body['comment'] ?? '-';
+    $comment = $body['comment'] ?? 'нет';
 
     $street = $body['street'] ?? '';
     $house = $body['house'] ?? '';
@@ -44,7 +44,7 @@ $app->post('/order', function (Request $request, Response $response, array $args
         $extrasParsed[] = $extra['name'] . ' x' . $extra['quantity'];
     }
 
-    $date = date('d.m.Y H:i:s');
+    $date = date('d.m.y H:i');
     $raw = json_encode($body);
 
     $messageText = generateLetter(
