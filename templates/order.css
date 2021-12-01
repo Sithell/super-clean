@@ -1,0 +1,48 @@
+body {
+    background: deepskyblue;
+    font-weight: normal;
+    font-family: Roboto, serif;
+}
+
+.card {
+    margin: 16pt auto;
+    padding: 16pt;
+    background: #fefefe;
+    max-width: 550px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.44);
+}
+
+.logo {
+    font-size: 24pt;
+    font-weight: bolder;
+    margin: 4pt;
+}
+
+.blue {
+    color: deepskyblue;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 16pt;
+}
+
+.new-order {
+    margin: 4pt;
+}
+
+.date {
+    margin: 4pt;
+    font-size: 12pt;
+    color: #808080;
+}
+
+.content {
+    font-size: 12pt;
+    line-height: 20pt;
+}
+
+ul {
+    margin-top: 8pt;
+    margin-bottom: 16pt;
+}
