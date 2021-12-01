@@ -1,0 +1,5 @@
+.idea/*
+vendor/*
+config/credentials.json
+config/token.json
+config/app.php
