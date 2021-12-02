@@ -17,7 +17,7 @@ function generateLetter(
     string $comment,
     int $price,
     string $raw,
-    string $date,
+    string $date
 ): string
 {
     if (!$template = file_get_contents(__DIR__ . '/../templates/order.min.html')) {

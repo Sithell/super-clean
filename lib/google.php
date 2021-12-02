@@ -41,7 +41,7 @@ function getClient(): Google_Client
     $client = new Google_Client();
     $client->setApplicationName('Super Clean Mail Sender');
     $client->setScopes(Google_Service_Gmail::GMAIL_SEND);
-    $client->setAuthConfig('../config/credentials.json');
+    $client->setAuthConfig(__DIR__ . '/../config/credentials.json');
     $client->setAccessType('offline');
     $client->setPrompt('select_account consent');
 
@@ -49,7 +49,7 @@ function getClient(): Google_Client
     // The file token.json stores the user's access and refresh tokens, and is
     // created automatically when the authorization flow completes for the first
     // time.
-    $tokenPath = '../config/token.json';
+    $tokenPath = __DIR__ . '/../config/token.json';
     if (file_exists($tokenPath)) {
         $accessToken = json_decode(file_get_contents($tokenPath), true);
         $client->setAccessToken($accessToken);
