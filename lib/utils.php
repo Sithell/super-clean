@@ -26,13 +26,16 @@ function generateLetter(
 
     $template = preg_replace('{{city}}', $city, $template);
     $template = preg_replace('{{phone}}', $phone, $template);
-    $template = preg_replace('{{address}}', $address, $template);
     $template = preg_replace('{{area}}', $area, $template);
     $template = preg_replace('{{type}}', $type, $template);
     $template = preg_replace('{{comment}}', $comment, $template);
     $template = preg_replace('{{price}}', strval($price), $template);
     $template = preg_replace('{{raw}}', $raw, $template);
     $template = preg_replace('{{date}}', $date, $template);
+
+    $addressLink = 'https://www.google.ru/maps/search/' . implode('+', explode(' ', $address));
+    $template = preg_replace('{{address}}', $address, $template);
+    $template = preg_replace('{{address_link}}', $addressLink, $template);
 
     $extraString = '';
     foreach ($extras as $extra) {
