@@ -65,7 +65,7 @@ $app->post('/order', function (Request $request, Response $response, array $args
             $config['mail']['from'],
             $config['mail']['to'],
             $config['mail']['subject'],
-            $messageText,
+            $messageText
         );
         $response = $response->withJson(['status' => 'ok'], StatusCode::HTTP_OK);
     } catch (Exception $e) {
